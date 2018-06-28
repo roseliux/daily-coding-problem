@@ -1,2 +1,3 @@
 # daily-coding-problem
-https://www.dailycodingproblem.com/
+Solutions to https://www.dailycodingproblem.com
+with ruby.
