@@ -24,13 +24,18 @@ def better_solution(array)
   result
 end
 
+def short_solution(array)
+  product = array.inject(:*)
+  array.map {|element| product / element }
+end
+
 require 'minitest/autorun'
 class Tests < Minitest::Test
   def test_example_one
-    assert_equal [120, 60, 40, 30, 24], better_solution([1, 2, 3, 4, 5])
+    assert_equal [120, 60, 40, 30, 24], short_solution([1, 2, 3, 4, 5])
   end
 
   def test_example_two
-    assert_equal [2, 3, 6], better_solution([3, 2, 1])
+    assert_equal [2, 3, 6], short_solution([3, 2, 1])
   end
 end
