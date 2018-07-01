@@ -8,13 +8,18 @@
 
 
 def my_solution(array, k)
-  # TODO
-  true
+	until array.empty?
+		element = array.shift
+		array.each {|e| return true if e + element == k}
+	end
+	false
 end
 
 require 'minitest/autorun'
 class Tests < Minitest::Test
   def test_example_one
     assert_equal true, my_solution([10, 15, 3, 7], 17)
-  end
+    assert_equal false, my_solution([], 1)
+  	assert_equal false, my_solution([3, 10, 3, 2], 222)
+   end
 end
