@@ -25,7 +25,7 @@ class Node
 end
 
 def serialize(tree)
-  return Marshal.dump(tree)
+  Marshal.dump(tree)
 end
 
 def deserialize(serialized)
